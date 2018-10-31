@@ -1,0 +1,23 @@
+{
+    "name": "sockstack/weather",
+    "description": "A weather SDK.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sockstack",
+            "email": "85564748@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sockstack\\Weather\\": "src",
+            "Sockstack\\Weather\\Tests\\": "test"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.4"
+    }
+}
