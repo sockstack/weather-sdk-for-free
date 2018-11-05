@@ -43,7 +43,7 @@ class Weather
         }
     }
 
-    protected function getUrl(string $city)
+    protected function getUrl($city)
     {
         return str_replace('{city}', $city, $this->url);
     }
