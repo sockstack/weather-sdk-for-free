@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: Administrator
  * Date: 2018/10/31
- * Time: 15:06
+ * Time: 15:06.
  */
 
 namespace Sockstack\Weather;
@@ -14,7 +14,7 @@ use Sockstack\Weather\Exceptions\InvalidArgumentException;
 
 class Weather
 {
-    protected $url = "http://wthrcdn.etouch.cn/weather_mini?city={city}";
+    protected $url = 'http://wthrcdn.etouch.cn/weather_mini?city={city}';
     protected $guzzleOptions = [];
 
     public function getHttpClient()
@@ -30,7 +30,7 @@ class Weather
     public function getWeather($city, string $json = null)
     {
         if (!is_string($city)) {
-            throw new InvalidArgumentException("Invalid params city. " . gettype($city));
+            throw new InvalidArgumentException('Invalid params city. '.gettype($city));
         }
         $url = $this->getUrl($city);
 
@@ -39,7 +39,7 @@ class Weather
 
             return !$json ? $response : json_decode($response, true);
         } catch (\Exception $e) {
-            throw new HttpException($e->getMessage(),$e->getCode(), $e);
+            throw new HttpException($e->getMessage(), $e->getCode(), $e);
         }
     }
 

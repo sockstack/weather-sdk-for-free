@@ -3,14 +3,11 @@
  * Created by PhpStorm.
  * User: Administrator
  * Date: 2018/10/31
- * Time: 15:43
+ * Time: 15:43.
  */
 
 namespace Overtrue\Weather\Tests;
 
-
-use GuzzleHttp\Client;
-use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 use Sockstack\Weather\Exceptions\InvalidArgumentException;
 use Sockstack\Weather\Weather;
@@ -22,7 +19,7 @@ class WeatherTest extends TestCase
         $weather = new Weather();
 
         $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage("Invalid params city. array");
+        $this->expectExceptionMessage('Invalid params city. array');
 
         $weather->getWeather([]);
 
