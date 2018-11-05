@@ -27,7 +27,7 @@ class Weather
         $this->guzzleOptions = $options;
     }
 
-    public function getWeather($city, boolean $json = null)
+    public function getWeather($city, $json = null)
     {
         if (!is_string($city)) {
             throw new InvalidArgumentException('Invalid params city. '.gettype($city));
