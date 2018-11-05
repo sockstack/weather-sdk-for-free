@@ -9,6 +9,7 @@
 namespace Sockstack\Weather;
 
 use GuzzleHttp\Client;
+use phpDocumentor\Reflection\Types\Boolean;
 use Sockstack\Weather\Exceptions\HttpException;
 use Sockstack\Weather\Exceptions\InvalidArgumentException;
 
@@ -27,7 +28,7 @@ class Weather
         $this->guzzleOptions = $options;
     }
 
-    public function getWeather($city, string $json = null)
+    public function getWeather($city, bool $json = null)
     {
         if (!is_string($city)) {
             throw new InvalidArgumentException('Invalid params city. '.gettype($city));
