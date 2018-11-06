@@ -1,6 +1,7 @@
 <h1 align="center"> weather </h1>
 
-<p align="center"> we.</p>
+[![Build Status](https://www.travis-ci.org/sockstack/weather-sdk-for-free.svg?branch=master)](https://www.travis-ci.org/sockstack/weather-sdk-for-free)
+[![StyleCI](https://github.styleci.io/repos/155529969/shield?branch=master)](https://github.styleci.io/repos/155529969)
 
 
 ## Installing
