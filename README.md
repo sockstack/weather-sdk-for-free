@@ -3,6 +3,9 @@
 [![Build Status](https://www.travis-ci.org/sockstack/weather-sdk-for-free.svg?branch=master)](https://www.travis-ci.org/sockstack/weather-sdk-for-free)
 [![StyleCI](https://github.styleci.io/repos/155529969/shield?branch=master)](https://github.styleci.io/repos/155529969)
 
+## Notice
+
+这是一个测试案例，不可用于生产环境。
 
 ## Installing
 
