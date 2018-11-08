@@ -57,12 +57,12 @@ class WeatherTest extends TestCase
         $weather = new Weather();
         $weather->setGuzzleOptions([
             'headers' => [
-                "Content-Type" => "application/json"
-            ]
+                'Content-Type' => 'application/json',
+            ],
         ]);
         $config = $weather->getHttpClient()->getConfig();
 
-        $this->assertSame($config['headers']['Content-Type'], "application/json");
+        $this->assertSame($config['headers']['Content-Type'], 'application/json');
     }
 
     /**
