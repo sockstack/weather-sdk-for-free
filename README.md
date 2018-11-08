@@ -2,6 +2,7 @@
 
 [![Build Status](https://www.travis-ci.org/sockstack/weather-sdk-for-free.svg?branch=master)](https://www.travis-ci.org/sockstack/weather-sdk-for-free)
 [![StyleCI](https://github.styleci.io/repos/155529969/shield?branch=master)](https://github.styleci.io/repos/155529969)
+[![codecov](https://codecov.io/gh/sockstack/weather-sdk-for-free/branch/master/graph/badge.svg)](https://codecov.io/gh/sockstack/weather-sdk-for-free)
 
 ## Notice
 
