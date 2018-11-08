@@ -43,4 +43,45 @@ class WeatherTest extends TestCase
 
         $this->assertSame(['status' => 1000], $response);
     }
+
+    public function testGetHttpClient()
+    {
+        $weather = new Weather();
+        $client = $weather->getHttpClient();
+
+        $this->assertTrue($client instanceof Client);
+    }
+
+    public function testSetOptions()
+    {
+        $weather = new Weather();
+        $weather->setGuzzleOptions([
+            'headers' => [
+                "Content-Type" => "application/json"
+            ]
+        ]);
+        $config = $weather->getHttpClient()->getConfig();
+
+        $this->assertSame($config['headers']['Content-Type'], "application/json");
+    }
+
+    /**
+     * @expectedException \Sockstack\Weather\Exceptions\HttpException
+     * @expectedExceptionMessage 请求出错
+     */
+    public function testHttpException()
+    {
+        $response = new Response(500);
+        $url = 'http://wthrcdn.etouch.cn/weather_mini?city=广州';
+
+        $client = \Mockery::mock(Client::class);
+        $client->allows()->get($url)->andReturn($response);
+
+        $weather = \Mockery::mock(Weather::class)->makePartial();
+        $weather->allows()->getHttpClient()->andReturn($client);
+
+        $response = $weather->getWeather('广州');
+
+        $this->fail('测试失败');
+    }
 }
