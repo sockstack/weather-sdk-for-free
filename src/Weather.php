@@ -37,9 +37,10 @@ class Weather
         try {
             $response = $this->getHttpClient()->get($url);
             if ($response->getStatusCode() != 200) {
-                throw new \Exception("请求出错");
+                throw new \Exception('请求出错');
             }
             $response = $response->getBody()->getContents();
+
             return !$json ? $response : json_decode($response, true);
         } catch (\Exception $e) {
             throw new HttpException($e->getMessage(), $e->getCode(), $e);
